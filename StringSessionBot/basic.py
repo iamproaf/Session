@@ -8,7 +8,7 @@ def filter(cmd: str):
 
 
 # Start Message
-@Client.on_message(filter("start"))
+@Client.on_message(filter("angel"))
 async def start(bot: Client, msg: Message):
     user = await bot.get_me()
     mention = user.mention
@@ -20,7 +20,7 @@ async def start(bot: Client, msg: Message):
 
 
 # Help Message
-@Client.on_message(filter("help"))
+@Client.on_message(filter("angelhelp"))
 async def _help(bot: Client, msg: Message):
     await bot.send_message(
         msg.chat.id, Data.HELP, reply_markup=InlineKeyboardMarkup(Data.home_buttons)
@@ -28,7 +28,7 @@ async def _help(bot: Client, msg: Message):
 
 
 # About Message
-@Client.on_message(filter("about"))
+@Client.on_message(filter("angeabout"))
 async def about(bot: Client, msg: Message):
     await bot.send_message(
         msg.chat.id,
@@ -39,7 +39,7 @@ async def about(bot: Client, msg: Message):
 
 
 # Repo Message
-@Client.on_message(filter("repo"))
+@Client.on_message(filter("pepo"))
 async def repo(bot, msg):
     await bot.send_message(
         msg.chat.id,
